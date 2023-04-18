@@ -2,7 +2,10 @@ package com.example.noteapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+<<<<<<< HEAD
 import androidx.appcompat.app.AlertDialog;
+=======
+>>>>>>> 5791ce39cf18770c05ccb1d2367a4f10106f12b5
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
@@ -10,12 +13,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
 import android.widget.AdapterView;
+=======
+>>>>>>> 5791ce39cf18770c05ccb1d2367a4f10106f12b5
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+<<<<<<< HEAD
 import android.widget.Toast;
+=======
+>>>>>>> 5791ce39cf18770c05ccb1d2367a4f10106f12b5
 
 import org.w3c.dom.Text;
 
@@ -36,7 +45,10 @@ public class MainActivity extends AppCompatActivity {
         inputNote = findViewById(R.id.input_note);
         inputTitle = findViewById(R.id.input_title);
         noteList = findViewById(R.id.note_list);
+<<<<<<< HEAD
         notes = new ArrayList<>();
+=======
+>>>>>>> 5791ce39cf18770c05ccb1d2367a4f10106f12b5
         noteAdapter = new ArrayAdapter<Note>(this, R.layout.list_item_note, R.id.note_title, notes) {
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
                 View view = super.getView(position, convertView, parent);

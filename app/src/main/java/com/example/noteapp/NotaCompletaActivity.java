@@ -22,11 +22,11 @@ public class NotaCompletaActivity extends AppCompatActivity {
 
         // Obtener la nota seleccionada del Intent
         Intent intent = getIntent();
-        String notaSeleccionada = intent.getStringExtra("nota");
+        String title = intent.getStringExtra("title");
+        String content = intent.getStringExtra("content");
+        textViewTitulo.setText("Título: " + title);
+        textViewContenido.setText("Contenido: " + content);
 
-        // Establecer el contenido de los TextViews con los datos de la nota seleccionada
-        textViewTitulo.setText("Título: " + notaSeleccionada);
-        textViewContenido.setText("Contenido: " + notaSeleccionada);
     }
 
 }

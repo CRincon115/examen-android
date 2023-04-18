@@ -2,10 +2,7 @@ package com.example.noteapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-<<<<<<< HEAD
 import androidx.appcompat.app.AlertDialog;
-=======
->>>>>>> 5791ce39cf18770c05ccb1d2367a4f10106f12b5
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
@@ -13,18 +10,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD
 import android.widget.AdapterView;
-=======
->>>>>>> 5791ce39cf18770c05ccb1d2367a4f10106f12b5
+
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-<<<<<<< HEAD
+
 import android.widget.Toast;
-=======
->>>>>>> 5791ce39cf18770c05ccb1d2367a4f10106f12b5
+
 
 import org.w3c.dom.Text;
 
@@ -45,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         inputNote = findViewById(R.id.input_note);
         inputTitle = findViewById(R.id.input_title);
         noteList = findViewById(R.id.note_list);
-<<<<<<< HEAD
+
         notes = new ArrayList<>();
-=======
->>>>>>> 5791ce39cf18770c05ccb1d2367a4f10106f12b5
+
+
         noteAdapter = new ArrayAdapter<Note>(this, R.layout.list_item_note, R.id.note_title, notes) {
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
                 View view = super.getView(position, convertView, parent);
@@ -67,12 +61,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Obtener la nota seleccionada
-                String notaSeleccionada = String.valueOf(notes.get(position));
+                Note notaSeleccionada = notes.get(position);
+                String title = notaSeleccionada.getTitle();
+                String content = notaSeleccionada.getContent();
+
 
                 // Crear un Intent para iniciar la actividad NotaCompletaActivity
                 Intent intent = new Intent(MainActivity.this, NotaCompletaActivity.class);
-                intent.putExtra("nota", notaSeleccionada); // Pasa la nota seleccionada como extra en el Intent
+                intent.putExtra("title", title);
+                intent.putExtra("content", content);
                 startActivity(intent);
+
             }
         });
 
@@ -106,20 +105,6 @@ public class MainActivity extends AppCompatActivity {
         notes.clear();
         notes.addAll(databaseHelper.getAllNotes());
         noteAdapter.notifyDataSetChanged();
-    }
-
-    private void mostrarNotaCompleta(String nota) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Nota completa")
-                .setMessage(nota)
-                .setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        AlertDialog dialog = builder.create();
-        dialog.show();
     }
 
 }

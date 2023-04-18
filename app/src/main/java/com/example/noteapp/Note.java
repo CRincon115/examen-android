@@ -7,6 +7,7 @@ public class Note {
     public Note(String title, String content) {
         this.title = title;
         this.content = content;
+
     }
 
     public String getTitle() {

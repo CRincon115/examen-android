@@ -12,6 +12,13 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/input_title"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titulo" />
+
+        <EditText
             android:id="@+id/input_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

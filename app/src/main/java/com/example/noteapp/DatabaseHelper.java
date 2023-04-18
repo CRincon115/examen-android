@@ -72,7 +72,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_TITLE, notaSeleccionada.getTitle());
         values.put(COLUMN_CONTENT, notaSeleccionada.getContent());
 
-        String[] args = { String.valueOf(notaSeleccionada.getId()) };
+        String[] args = { String.valueOf(notaSeleccionada) };
         db.update(TABLE_NAME, values, COLUMN_ID + "=?", args);
 
         db.close();

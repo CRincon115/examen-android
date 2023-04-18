@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_marron"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar Nota"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/marron"
+            android:textStyle="italic">
+        </TextView>
+
+        <EditText
+            android:id="@+id/input_title"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titulo"
+            android:background="@color/lighter_marron"
+            android:maxLines="1"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/input_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribir una nota"
+            android:layout_below="@id/input_title"
+            android:background="@color/lighter_marron"
+            android:layout_marginBottom="1dp" />
+
+        <TextView
+            android:id="@+id/txtNotas"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_note"
+            android:text="Notas Agregadas"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            android:textColor="@color/marron"
+            android:textStyle="italic">
+        </TextView>
+
+        <ListView
+            android:id="@+id/note_list"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/input_note"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:layout_below="@id/note_list"
+            android:onClick="addNoteOnClick" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

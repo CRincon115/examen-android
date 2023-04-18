@@ -62,14 +62,19 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Obtener la nota seleccionada
                 Note notaSeleccionada = notes.get(position);
-                String title = notaSeleccionada.getTitle();
-                String content = notaSeleccionada.getContent();
+//                String title = notaSeleccionada.getTitle();
+//                String content = notaSeleccionada.getContent();
 
 
-                // Crear un Intent para iniciar la actividad NotaCompletaActivity
-                Intent intent = new Intent(MainActivity.this, NotaCompletaActivity.class);
-                intent.putExtra("title", title);
-                intent.putExtra("content", content);
+//                // Crear un Intent para iniciar la actividad NotaCompletaActivity
+//                Intent intent = new Intent(MainActivity.this, NotaCompletaActivity.class);
+//                intent.putExtra("title", title);
+//                intent.putExtra("content", content);
+//                startActivity(intent);
+
+                // Crear un Intent para iniciar la actividad ModificarNotaActivity
+                Intent intent = new Intent(MainActivity.this, ModificarNotaActivity.class);
+                intent.putExtra("nota", notaSeleccionada); // Pasa la nota seleccionada como extra en el Intent
                 startActivity(intent);
 
             }

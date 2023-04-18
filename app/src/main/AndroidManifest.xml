@@ -18,6 +18,9 @@
             android:name=".NotaCompletaActivity"
             android:exported="false" />
         <activity
+            android:name=".ModificarNotaActivity"
+            android:exported="false"/>
+        <activity
             android:name=".LoadingActivity"
             android:exported="true" >
             <intent-filter>
@@ -26,6 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

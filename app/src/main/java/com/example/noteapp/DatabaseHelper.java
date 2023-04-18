@@ -65,4 +65,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return notes;
     }
 
+    public void updateNote(Note notaSeleccionada) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_TITLE, notaSeleccionada.getTitle());
+        values.put(COLUMN_CONTENT, notaSeleccionada.getContent());
+
+        String[] args = { String.valueOf(notaSeleccionada.getId()) };
+        db.update(TABLE_NAME, values, COLUMN_ID + "=?", args);
+
+        db.close();
+    }
 }

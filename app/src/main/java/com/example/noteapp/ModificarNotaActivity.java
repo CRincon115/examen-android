@@ -43,6 +43,10 @@ public class ModificarNotaActivity extends AppCompatActivity {
             // Actualizar la nota en la base de datos
             notaSeleccionada.setTitle(newTitle);
             notaSeleccionada.setContent(newContent);
+<<<<<<< HEAD
+=======
+            databaseHelper.updateNote(notaSeleccionada);
+>>>>>>> 8684952d78c6877f63a3b51b8adb34fd2c0ee6ea
 
             // Regresar a la actividad MainActivity
             Intent intent = new Intent(ModificarNotaActivity.this, MainActivity.class);
@@ -52,4 +56,8 @@ public class ModificarNotaActivity extends AppCompatActivity {
             Toast.makeText(ModificarNotaActivity.this, "Por favor ingrese un título y contenido", Toast.LENGTH_SHORT).show();
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8684952d78c6877f63a3b51b8adb34fd2c0ee6ea

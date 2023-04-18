@@ -19,6 +19,21 @@ public class Note implements Serializable {
     public String getContent() {
         return content;
     }
+<<<<<<< HEAD
+=======
+
+    public void setTitle(String newTitle) {
+        this.title = newTitle;
+    }
+
+    public void setContent(String newContent) {
+        this.content = newContent;
+
+    }
+
+
+}
+>>>>>>> 8684952d78c6877f63a3b51b8adb34fd2c0ee6ea
 
     public void setTitle(String newTitle) {
     }

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ModificarNotaActivity">
+=======
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+>>>>>>> 8684952d78c6877f63a3b51b8adb34fd2c0ee6ea
 
 </androidx.constraintlayout.widget.ConstraintLayout>

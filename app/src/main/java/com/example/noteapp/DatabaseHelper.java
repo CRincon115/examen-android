@@ -65,4 +65,38 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return notes;
     }
 
+<<<<<<< HEAD
 }
+=======
+    public void updateNote(Note notaSeleccionada) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_TITLE, notaSeleccionada.getTitle());
+        values.put(COLUMN_CONTENT, notaSeleccionada.getContent());
+
+        String[] args = { String.valueOf(getId(notaSeleccionada)) }; //obtener el id de la nota seleccionada
+        db.update(TABLE_NAME, values, COLUMN_ID + "=?", args);
+
+        db.close();
+    }
+
+    private int getId(Note note) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT " + COLUMN_ID + " FROM " + TABLE_NAME + " WHERE " + COLUMN_TITLE + " = ? AND " + COLUMN_CONTENT + " = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{note.getTitle(), note.getContent()});
+
+        int id = -1;
+
+        if (cursor.moveToFirst()) {
+            id = cursor.getInt(cursor.getColumnIndex(COLUMN_ID));
+        }
+
+        cursor.close();
+        db.close();
+
+        return id;
+    }
+
+}
+>>>>>>> 8684952d78c6877f63a3b51b8adb34fd2c0ee6ea

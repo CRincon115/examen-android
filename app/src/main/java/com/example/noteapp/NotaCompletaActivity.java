@@ -24,8 +24,14 @@ public class NotaCompletaActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String title = intent.getStringExtra("title");
         String content = intent.getStringExtra("content");
+<<<<<<< HEAD
         textViewTitulo.setText(title);
         textViewContenido.setText(content);
+=======
+        textViewTitulo.setText("Título: " + title);
+        textViewContenido.setText("Contenido: " + content);
+
+>>>>>>> 8684952d78c6877f63a3b51b8adb34fd2c0ee6ea
     }
 
 }

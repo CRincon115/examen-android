@@ -35,6 +35,13 @@
             android:layout_marginBottom="8dp" />
 
         <EditText
+            android:id="@+id/input_title"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titulo" />
+
+        <EditText
             android:id="@+id/input_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,6 +77,16 @@
             android:layout_below="@id/note_list"
             android:onClick="addNoteOnClick" />
 
+<<<<<<< HEAD
+=======
+        <ListView
+            android:id="@+id/note_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+>>>>>>> 8684952d78c6877f63a3b51b8adb34fd2c0ee6ea
     </LinearLayout>
 
 

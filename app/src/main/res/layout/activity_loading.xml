@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@color/light_marron"
+=======
+
+>>>>>>> 8684952d78c6877f63a3b51b8adb34fd2c0ee6ea
     tools:context=".LoadingActivity">
 
     <LinearLayout
@@ -21,7 +25,11 @@
             android:textAlignment="center"
             android:text="Notas"
             android:textSize="35sp"
+<<<<<<< HEAD
             android:textColor="@color/marron"
+=======
+
+>>>>>>> 8684952d78c6877f63a3b51b8adb34fd2c0ee6ea
             android:textStyle="bold">
 
         </TextView>

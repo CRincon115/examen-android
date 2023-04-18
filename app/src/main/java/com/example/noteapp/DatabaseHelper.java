@@ -64,4 +64,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return notes;
     }
+
 }

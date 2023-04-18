@@ -21,10 +21,14 @@ public class Note implements Serializable {
     }
 
     public void setTitle(String newTitle) {
+        this.title = newTitle;
     }
 
     public void setContent(String newContent) {
+        this.content = newContent;
+
     }
+
 
 }
 

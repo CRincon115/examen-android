@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".LoadingActivity">
 
     <LinearLayout
@@ -18,9 +19,9 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Notes App"
+            android:text="Notas"
             android:textSize="35sp"
-            android:textColor="@color/black"
+
             android:textStyle="bold">
 
         </TextView>
@@ -32,13 +33,6 @@
             android:src="@drawable/ic_image_placeholder">
 
         </ImageView>
-
-        <Button
-            android:id="@+id/btnComenzar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Comenzar">
-        </Button>
 
     </LinearLayout>
 
